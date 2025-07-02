@@ -20,14 +20,14 @@ contract InitializeCCNFT is Script {
         ccnft.setFundsCollector(FUNDS_COLLECTOR_ADDRESS);
         ccnft.setFeesCollector(FEES_COLLECTOR_ADDRESS);
 
-        ccnft.setProfitToPay(100);
+        ccnft.setProfitToPay(5); // 5% profit to pay for claims
         ccnft.setCanBuy(true);
         ccnft.setCanClaim(true);
         ccnft.setCanTrade(true);
-        ccnft.setMaxValueToRaise(10000000);
-        ccnft.addValidValues(20);
+        ccnft.setMaxValueToRaise(1000000 * 10**18); // 1 million BUSD
+        ccnft.addValidValues(200 * 10**18); // 200 BUSD
         ccnft.setMaxBatchCount(3);
-        ccnft.setBuyFee(1);
-        ccnft.setTradeFee(2);
+        ccnft.setBuyFee(5); // 5% buy fee
+        ccnft.setTradeFee(10); // 10% trade fee
     }
 }

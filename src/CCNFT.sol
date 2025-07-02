@@ -83,7 +83,7 @@ contract CCNFT is ERC721Enumerable, Ownable, ReentrancyGuard {
     IERC20 public fundsToken;
 
 // Constructor (nombre y símbolo del NFT).    
-    constructor() ERC721("Criptocampo", "CMPO") {
+    constructor() ERC721("Criptocampo", "CCNFT") {
     }
 
     // PUBLIC FUNCTIONS

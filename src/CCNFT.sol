@@ -188,7 +188,7 @@ contract CCNFT is ERC721Enumerable, Ownable, ReentrancyGuard {
 
         emit Trade(_msgSender(), ownerOf(tokenId), tokenId, tokenSale.price); // Registro de dirección del comprador, dirección del vendedor, tokenId, y precio de venta.
 
-        _safeTransfer(ownerOf(tokenId), _msgSender(), tokenId); // Transferencia del NFT del propietario actual al comprador.
+        _safeTransfer(ownerOf(tokenId), _msgSender(), tokenId, ""); // Transferencia del NFT del propietario actual al comprador.
 
         tokenSale.onSale = false; // NFT no disponible para la venta.
         tokenSale.price = 0; // Reseteo del precio de venta del NFT.
